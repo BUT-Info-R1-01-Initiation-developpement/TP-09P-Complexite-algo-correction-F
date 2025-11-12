@@ -9,12 +9,16 @@ package tp09.activite.bcd
 // de l'objet.
 //
 // a. Les objets de type ListeEntiers sont caractérisés par combien de propriétés ?
-// ...
+// 4, capaciteInitiale, capaciteReelle, tableauEntiers, taille
+
 // b. Que fait le code contenu dans le bloc init ?
-// ...
-// ...
+// Il ajoute les entiers du tableau passé en paramètre du constructeur à la liste d'entiers.
+
 // c. Quelles sont les trois compétences principales d'un objet de type ListeEntiers ?
-// ...
+// 1. Retourne l'élément de la liste à l'indice spécifié => get(i:Int): Int
+// 2. et 3. Ajouter un ou plusieurs entiers à la liste
+
+
 class ListeEntiers(tabEntiers: Array<Int>) {
 
     val capaciteInitiale = 100
