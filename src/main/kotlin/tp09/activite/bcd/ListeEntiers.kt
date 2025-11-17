@@ -47,7 +47,8 @@ class ListeEntiers(tabEntiers: Array<Int>) {
      */
     fun ajoute(element: Int) {
         // d. Quel est le but de la méthode assureCapacite() ?
-        // ...
+        // Vérifie que la capacité de la liste a une taille suffisante et
+        // augmente la taille si besoin
         this.assureCapacite()
         this.tableauEntiers[taille] = element
         this. taille++
@@ -61,7 +62,8 @@ class ListeEntiers(tabEntiers: Array<Int>) {
      */
     fun ajoute(elements: Array<Int>) {
         // e. Quel est le but de la méthode assureCapacite(nbElementsAAjouter: Int) ?
-        // ...
+        // Vérifie que la capacité de la liste a une taille suffisante pour ajouter tous les
+        // éléments passés en paramètre (dans un tableau) et augmente la taille si besoin
         this.assureCapacite(elements.size)
         for(element in elements) {
             this.ajoute(element)
