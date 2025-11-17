@@ -88,13 +88,15 @@ class ListeEntiers(tabEntiers: Array<Int>) {
     }
 
     // f. Que fait la méthode augmenteCapacite() pour augmenter la capacité de la liste ?
-    // ...
+    // - Elle crée un nouveau tableau dont la taille est la nouvelle taille augmentée de tailleAugmentation cases
+    // - Elle recopie tous les élements de la liste dans le nouveau tableau
+    // - Elle fait référencer la propriété tableauEntiers vers le nouveau tableau
     // g. Quelle est la complexité asymptotique de la méthode augmenteCapacite() quand la taille de la liste est très grande ?
     // Vous devez exprimer cette complexité avec la notation Grand O et justifier votre réponse.
-    // ...
+    // O(n) (on recopie les éléments du tableau
     // h. Déduisez-en la complexité de l'ajout d'un élément dans une liste :
-    // - dans le meilleur cas : ......
-    // - dans le pire cas : ....
+    // - dans le meilleur cas : O(1) car pas de recopie des éléments du tableau si capacité de la liste est OK
+    // - dans le pire cas : O(n) car besoin de recopie de tous les éléments de la liste si capacité est KO
     fun augmenteCapacite(tailleAugmentation: Int = this.capaciteInitiale) { // on donne une valeur par défaut à la taille d'augmentation
         this.capaciteReelle += tailleAugmentation
         val nouveauTableauElements = Array<Int?>(this.capaciteReelle) { null }
