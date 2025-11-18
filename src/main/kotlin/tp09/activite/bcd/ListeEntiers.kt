@@ -101,6 +101,9 @@ class ListeEntiers(tabEntiers: Array<Int>) {
         }
     }
 
+    /**
+     * Retourne la liste des indices valides
+     */
     fun indices(): IntRange {
         return IntRange(0,taille-1)
     }
