@@ -21,10 +21,12 @@ package tp09.activite.bcd
 
 class ListeEntiers(tabEntiers: Array<Int>) {
 
-    val capaciteInitiale = 100
-    var capaciteReelle = capaciteInitiale
+    private val capaciteInitiale = 100
+    private var capaciteReelle = capaciteInitiale
     private var tableauEntiers = Array<Int?>(capaciteReelle) { null }
+
     var taille = 0
+        private set    // rend l'accès en écriture privé
 
     init {
         this.ajoute(tabEntiers)
@@ -70,13 +72,13 @@ class ListeEntiers(tabEntiers: Array<Int>) {
         }
     }
 
-    fun assureCapacite() {
+    private fun assureCapacite() {
         if (this.taille == this.capaciteReelle) {
             this.augmenteCapacite()
         }
     }
 
-    fun assureCapacite(nbElementsAAjouter: Int) {
+    private fun assureCapacite(nbElementsAAjouter: Int) {
         val tailleFinale = this.taille + nbElementsAAjouter
         if (tailleFinale  > this.capaciteReelle) {
             this.augmenteCapacite(tailleFinale)
@@ -97,7 +99,7 @@ class ListeEntiers(tabEntiers: Array<Int>) {
     // h. Déduisez-en la complexité de l'ajout d'un élément dans une liste :
     // - dans le meilleur cas : O(1) car pas de recopie des éléments du tableau si capacité de la liste est OK
     // - dans le pire cas : O(n) car besoin de recopie de tous les éléments de la liste si capacité est KO
-    fun augmenteCapacite(tailleAugmentation: Int = this.capaciteInitiale) { // on donne une valeur par défaut à la taille d'augmentation
+    private fun augmenteCapacite(tailleAugmentation: Int = this.capaciteInitiale) { // on donne une valeur par défaut à la taille d'augmentation
         this.capaciteReelle += tailleAugmentation
         val nouveauTableauElements = Array<Int?>(this.capaciteReelle) { null }
         for (i in 0 until this.taille) {

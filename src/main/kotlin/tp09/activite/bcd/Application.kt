@@ -9,7 +9,8 @@ fun main() {
     // j. Commentez la ligne 8 (on en aura besoin ultérieurement).
     // Modifiez le code pour ajouter "correctement"  l'élément `501`dans la liste et  que la ligne 9
     // s'exécute sans erreur.
-    //liste.tableauEntiers[5] = 501
+    // liste.tableauEntiers[5] = 501
     liste.ajoute(501)
+    //liste.taille = 356
     println(liste[4])
 }
