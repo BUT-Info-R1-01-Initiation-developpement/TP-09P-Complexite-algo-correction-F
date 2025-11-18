@@ -11,5 +11,5 @@ fun main() {
     // s'exécute sans erreur.
     //liste.tableauEntiers[5] = 501
     liste.ajoute(501)
-    println(liste.get(4))
+    println(liste[4])
 }

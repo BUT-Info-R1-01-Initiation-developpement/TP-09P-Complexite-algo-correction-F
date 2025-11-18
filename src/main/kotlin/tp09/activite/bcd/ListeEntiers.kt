@@ -35,7 +35,7 @@ class ListeEntiers(tabEntiers: Array<Int>) {
      *
      * @param i l'indice de l'élément dans la liste
      */
-    fun get(i: Int): Int {
+    operator fun get(i: Int): Int {
         require(i in this.indices()) { "Indice invalide." }
         return tableauEntiers[i]!!
     }
