@@ -23,7 +23,7 @@ class ListeEntiers(tabEntiers: Array<Int>) {
 
     val capaciteInitiale = 100
     var capaciteReelle = capaciteInitiale
-    var tableauEntiers = Array<Int?>(capaciteReelle) { null }
+    private var tableauEntiers = Array<Int?>(capaciteReelle) { null }
     var taille = 0
 
     init {
