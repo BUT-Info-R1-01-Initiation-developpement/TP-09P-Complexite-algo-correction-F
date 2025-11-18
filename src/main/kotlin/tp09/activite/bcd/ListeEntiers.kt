@@ -72,6 +72,22 @@ class ListeEntiers(tabEntiers: Array<Int>) {
         }
     }
 
+    /**
+     * Recherche linéaire d'un élément dans la liste.
+     *
+     * @param elt l'élément recherché
+     *
+     * @return l'indice de l'élément recherché ou -1 si l'élément n'est pas dans la liste
+     */
+    fun chercheAvecApprocheLineaire(elt: Int): Int {
+        for (i in this.indices()) {
+            if (this.tableauEntiers[i] == elt) {
+                return i
+            }
+        }
+        return -1
+    }
+
     private fun assureCapacite() {
         if (this.taille == this.capaciteReelle) {
             this.augmenteCapacite()
