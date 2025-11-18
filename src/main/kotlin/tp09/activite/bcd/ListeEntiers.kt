@@ -51,7 +51,7 @@ class ListeEntiers(tabEntiers: Array<Int>) {
         // augmente la taille si besoin
         this.assureCapacite()
         this.tableauEntiers[taille] = element
-        this. taille++
+        this.taille++
     }
 
     /**
