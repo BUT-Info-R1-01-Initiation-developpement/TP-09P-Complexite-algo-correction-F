@@ -41,7 +41,7 @@ class ListeEntiersRechercheTest {
     }
 
     // ==== Recherche sur tableau trié
-    /*
+
         @Test
         fun `test recherche dichotomique element dans le tableau`() {
             // when
@@ -97,5 +97,5 @@ class ListeEntiersRechercheTest {
             // then
             assertEquals(3, liste.nombreOccurences(-56))
         }
-     */
+
 }
